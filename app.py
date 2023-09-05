@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-import pickle
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from statsmodels.tsa.arima.model import ARIMA
@@ -10,10 +9,6 @@ import streamlit as st
 
 # Load data
 data = pd.read_csv('Stock_Data.csv') 
-
-# Load models
-with open('models.pkl', 'rb') as file:
-    lr_models, arima_models = pickle.load(file)
 
 # Sidebar  
 st.sidebar.header('Options')
